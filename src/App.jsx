@@ -6,8 +6,8 @@ import Login from './components/user/Login';
 import Main from './components/main/Main';
 import Header2 from './components/main/Header2';
 import './App.css'
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 import Sidebar from './components/main/Sidebar';
+
 
 function App() {
 
@@ -19,6 +19,7 @@ function App() {
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
           <Route path='/' element={<Header2/>}></Route>
+  
           <Route path='/main' element={<Main/>}></Route>
           <Route path='/' element={<Sidebar/>}></Route>
           

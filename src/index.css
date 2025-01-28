@@ -42,6 +42,10 @@ header .sign_up_btn, .login_btn1{
   margin-left: 5px;  
 }
 
+.addCardInput{
+  background-color:rgb(206, 203, 215);
+  ;
+}
 
 
 
@@ -189,7 +193,8 @@ input{
   padding: 5px;
   border-radius: 10px;
   background-color: transparent;
-  color: rgba(255, 255, 255, 0.5)
+  color: rgba(255, 255, 255, 0.5);
+  font-size:14px ;
 }
 
 input:focus{
@@ -198,8 +203,10 @@ input:focus{
 }
 
 input:active{
+  background-color: transparent;
   border: none;
 }
+
 
 #input_btn:-webkit-autofill {
   background-color: transparent !important;
@@ -212,6 +219,9 @@ input:active{
   margin-left: 250px;
   padding: 20px;
   border-radius: 10px;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-row: 5; */
 }
 
 #task{
@@ -223,6 +233,7 @@ input:active{
 
 #task input, li, button{
   margin: 5px;
+  cursor: pointer;
 }
 
 #task ul {
@@ -234,8 +245,10 @@ input:active{
   border: 1px solid rgba(0, 0, 0, 0);
   box-sizing: border-box;
   list-style-type: none;
+  max-width: 200px;
   padding: 5px;
   border-radius: 10px;
+
   background-color: #7d7d7d3d;
   color: rgba(255, 255, 255, 0.5)
 
@@ -262,6 +275,7 @@ input:active{
   align-items: center;
   border: none;
   padding: 5px;
+  margin-left: 0;
   padding-right: 10px;
   border-radius: 10px;
   color: #ffffff80;
@@ -316,6 +330,11 @@ input:active{
 }
 
 .sidebar ul li a:hover {
-  background-color: #575757;
+  color: rgba(255, 255, 255, 0.5);
+
 }
 
+.addCardInput{
+  background-color: #7d7d7d3d;
+  border: 1px solid white;
+}
