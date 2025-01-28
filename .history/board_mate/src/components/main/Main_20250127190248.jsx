@@ -1,0 +1,58 @@
+import { useState } from "react";
+import Header2 from "./Header2";
+import Sidebar from "./Sidebar";
+
+const Main = () => {
+
+    const [showInput, setShowInput] = useState(false);
+    const [inputValue, setInputValue] = useState(false);
+    const [todos, setTodos] = useState(false);
+    
+    const handleAddCard = () => {
+        if(inputValue.trim()){
+            setTodos([...todos,inputValue])
+            setInputValue("")
+        }
+    }
+    
+
+
+    const handleShowInput = () => {
+        setShowInput((prev) => !prev)
+    }
+
+    // const handleNewCard = () => {
+    //     const [todos, setTodos] = useState([]);
+    //     const [inputValue, setInputValue] = useState("")
+    // }
+
+    return ( 
+
+        <>
+        <Header2/>
+        <Sidebar/>
+        <div className="tasks">
+            <div id="task">
+                <input type="text" id="input_btn" placeholder="todo-task" />
+                <ul>
+                    <li><a href="#">Working  </a></li>
+                </ul>
+                <button onClick={handleShowInput} ><img src="symbol.svg" alt="Logo"/>
+                <span> Add a card</span>
+                </button>
+                {showInput && (
+                    <div>
+                    <input
+                        type="text"
+                        />
+                        <button onClick={handleAddCard}><img src="tick.svg" alt="logo" /></button>
+                    </div>
+                )}
+            </div>
+        </div>
+        </>
+
+     );
+}
+ 
+export default Main;
