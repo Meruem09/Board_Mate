@@ -86,13 +86,14 @@ const Main = () => {
                             </div>
                         )}
                     </div>
+                    
+                </DndContext>
+                ))}
                     <div id="newBoard">
                         <button id="newBoardBtn" onClick={addBoards}>
                             Create new board
                         </button>
                     </div>
-                </DndContext>
-                ))}
             </div>
         </>
     );
