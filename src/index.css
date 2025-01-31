@@ -215,13 +215,15 @@ input:active{
 }
 
 
-.tasks{
+.tasks {
   margin-left: 250px;
   padding: 20px;
   border-radius: 10px;
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-row: 5; */
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Automatically adjusts based on available space */
+  grid-auto-rows: minmax(100px, auto); /* Ensures rows adjust based on content size */
+  justify-items: stretch; /* Makes sure the grid items stretch across available space */
 }
 
 #task{
@@ -229,6 +231,9 @@ input:active{
   padding: 10px 5px;
   border-radius: 10px;
   background-color: rgba(5, 5, 5, 0.586);
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
 }
 
 #task input, li, button{
@@ -236,9 +241,10 @@ input:active{
   cursor: pointer;
 }
 
-#task ul {
+#task ul li{
   list-style-type: none;
   padding: 0;
+  margin-left: 0px;
 }
 
 #task ul li {
@@ -338,3 +344,14 @@ input:active{
   background-color: #7d7d7d3d;
   border: 1px solid white;
 }
+
+.tasks {
+  margin-left: 250px; /* Adjust this value based on your sidebar width */
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid layout */
+  grid-auto-flow: dense; /* Ensures items fill gaps in the grid */
+  align-items: start; /* Align items to the top */
+}
+
