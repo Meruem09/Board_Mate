@@ -340,7 +340,7 @@ input:active{
 
 }
 
-.addCardInput{
+#addCardInput{
   background-color: #7d7d7d3d;
   border: 1px solid white;
 }
@@ -351,7 +351,6 @@ input:active{
   border-radius: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid layout */
-  grid-auto-flow: dense; /* Ensures items fill gaps in the grid */
   align-items: start; /* Align items to the top */
 }
 

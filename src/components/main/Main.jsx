@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Header2 from "./Header2";
 import Sidebar from "./Sidebar";
 import { SortableContext, verticalListSortingStrategy, useSortable, arrayMove } from '@dnd-kit/sortable';
@@ -11,12 +11,14 @@ const Main = () => {
     const [inputValues, setInputValues] = useState({});
     const [todos, setTodos] = useState({}); // ✅ Store todos as an object per board
 
+
     const addBoards = () => {
         const newBoardId = boards.length + 1;
         setBoards([...boards, newBoardId]);
         setShowInput(prev => ({ ...prev, [newBoardId]: false }));
         setInputValues(prev => ({ ...prev, [newBoardId]: "" }));
         setTodos(prev => ({ ...prev, [newBoardId]: [] })); // ✅ Initialize todos for the new board
+        const inputRef = useRef(null)
     };
 
     const handleAddCard = (boardId) => {
@@ -28,6 +30,7 @@ const Main = () => {
             }));
             setInputValues(prev => ({ ...prev, [boardId]: "" })); // ✅ Clear the input for this board
         }
+        
         setShowInput(prev => ({ ...prev, [boardId]: false })); // ✅ Hide the input for this board
     };
 
