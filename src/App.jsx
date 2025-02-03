@@ -5,8 +5,8 @@ import Home from './components/Home';
 import Login from './components/user/Login';
 import Main from './components/main/Main';
 import Header2 from './components/main/Header2';
-import './App.css'
 import Sidebar from './components/main/Sidebar';
+import './App.css'
 
 
 function App() {
@@ -18,10 +18,9 @@ function App() {
           <Route path='/' element={<Home/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register' element={<Register/>}></Route>
-          <Route path='/' element={<Header2/>}></Route>
-  
+          <Route path='/header2' element={<Header2/>}></Route>
           <Route path='/main' element={<Main/>}></Route>
-          <Route path='/' element={<Sidebar/>}></Route>
+          <Route path='/sidebar' element={<Sidebar/>}></Route>
           
         </Routes>
       </Router>

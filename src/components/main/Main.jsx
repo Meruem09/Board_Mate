@@ -18,7 +18,6 @@ const Main = () => {
         setShowInput(prev => ({ ...prev, [newBoardId]: false }));
         setInputValues(prev => ({ ...prev, [newBoardId]: "" }));
         setTodos(prev => ({ ...prev, [newBoardId]: [] })); // ✅ Initialize todos for the new board
-        const inputRef = useRef(null)
     };
 
     const handleAddCard = (boardId) => {
@@ -76,7 +75,7 @@ const Main = () => {
             <div className="tasks">
                 {boards.map((boardId) => (
                     <DndContext key={boardId} onDragEnd={(e) => handleDragEnd(e, boardId)} collisionDetection={closestCorners}>
-                        <div id="task">
+                        <div className="task">
                             <input type="text" id="input_btn" placeholder="todo-task" />
                             
                             {/* ✅ FIX: Only render <ul> if tasks exist */}

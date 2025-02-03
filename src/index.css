@@ -226,7 +226,7 @@ input:active{
   justify-items: stretch; /* Makes sure the grid items stretch across available space */
 }
 
-#task{
+.task{
   display: inline-block;
   padding: 10px 5px;
   border-radius: 10px;
@@ -236,18 +236,18 @@ input:active{
   margin-left: auto;
 }
 
-#task input, li, button{
+.task input, li, button{
   margin: 5px;
   cursor: pointer;
 }
 
-#task ul li{
+.task ul li{
   list-style-type: none;
   padding: 0;
   margin-left: 0px;
 }
 
-#task ul li {
+.task ul li {
   border: 1px solid rgba(0, 0, 0, 0);
   box-sizing: border-box;
   list-style-type: none;
@@ -260,23 +260,23 @@ input:active{
 
 }
 
-#task ul li:hover{
+.task ul li:hover{
   border: 1px solid rgb(0, 200, 255);
 }
 
-#task ul li a{
+.task ul li a{
   text-decoration: none;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
   display: block;
 }
 
-#task li {
+.task li {
   margin-left: auto;
 }
 
 
-#task button{
+.task button{
   display: flex;
   align-items: center;
   border: none;
@@ -307,10 +307,11 @@ input:active{
 .sidebar {
   width: 250px;
   height: 100vh; /* Full height */
-  background-color: #33333300; /* Dark background */
+  background-color: #ff000000; /* Dark background */
   color: #fff;
   padding: 20px;
   position: fixed; /* Makes it stick on scroll */
+  z-index: 100;
 }
 
 .sidebar h2 {
@@ -354,3 +355,4 @@ input:active{
   align-items: start; /* Align items to the top */
 }
 
+                 
