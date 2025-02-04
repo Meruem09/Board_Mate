@@ -310,6 +310,7 @@ input:active{
   background-color: #ff000000; /* Dark background */
   color: #fff;
   padding: 20px;
+  padding-left: 50px;
   position: fixed; /* Makes it stick on scroll */
   z-index: 100;
 }
