@@ -157,7 +157,7 @@ button{
   width: 100vw;
   margin: auto;
   border-bottom: 1px solid;
-  border-image: linear-gradient(90deg,rgba(81, 81, 81, 0),rgba(148, 148, 148, 0.403),rgba(81, 81, 81, 0))1;
+  border-image: linear-gradient(90deg,rgba(81, 81, 81, 0),rgba(148, 148, 148, 0.400),rgba(81, 81, 81, 0))1;
   color: rgb(206, 203, 215);
   display: flex;
   padding: 10px;
@@ -305,14 +305,13 @@ input:active{
 
   
 .sidebar {
-  width: 250px;
   height: 100vh; /* Full height */
   background-color: #ff000000; /* Dark background */
   color: #fff;
-  padding: 20px;
-  padding-left: 50px;
+  padding:  10px 50px;
   position: fixed; /* Makes it stick on scroll */
   z-index: 100;
+  border-right: 1px solid rgba(148, 148, 148, 0.400);
 }
 
 .sidebar h2 {
@@ -326,6 +325,13 @@ input:active{
 
 .sidebar ul li {
   margin: 15px 0;
+  background-color:rgba(148, 148, 148, 0.150);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.sidebar ul li:hover{
+  background-color:rgba(148, 148, 148, 0.400) ;
 }
 
 .sidebar ul li a {

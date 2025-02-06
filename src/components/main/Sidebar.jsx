@@ -13,7 +13,7 @@ const Sidebar = () => {
     return ( 
         <div className="sidebar">
             <ul>
-            <li onClick={handleHome} >Boards</li>
+            <li >Boards</li>
             <li >Template</li>
             <li >Home</li>
             </ul>
