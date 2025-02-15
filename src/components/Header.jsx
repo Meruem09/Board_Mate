@@ -13,11 +13,12 @@ const Header = () => {
         navigate_to('/login')
     }
     
-    useEffect(() => {
-        if (isSignedIn) {
-            navigate_to('/main');
-        }
-    }, [isSignedIn, navigate_to]);
+    // useEffect(() => {
+    //     if (isSignedIn) {
+    //         navigate_to('/main');
+    //     }
+        
+    // }, [isSignedIn, navigate_to]);
 
 
     return ( 

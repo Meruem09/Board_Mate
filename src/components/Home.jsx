@@ -1,4 +1,5 @@
 import Header from "./Header";
+import {motion} from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
@@ -6,7 +7,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     const handle_get_started = () =>{
-        navigate('/login')
+        navigate('/main')
     }
 
 
@@ -25,14 +26,24 @@ const Home = () => {
                     </div>
                 </div>
             
-                <div className="head1">
+                <motion.div
+                initial={{opacity:0,y:50}}
+                animate={{opacity:1,y:0}}
+                transition={{duration:1.1,ease:'easeInOut'}}
+                
+                className="head1">
                     <p>Organize Your Chaos</p>
                     <p>Like a Top Dog</p>
-                </div>
-                <div className="sub_head">
+                </motion.div>
+                <motion.div className="sub_head"
+                initial={{opacity:0,y:50}}
+                animate={{opacity:1,y:0}}
+                transition={{duration:1.1,ease:'easeInOut'}}
+                
+                >
                     <p>Turning your messy to-do list into a vibe check</p>
                         <p>making productivity 10x</p>
-                </div>
+                </motion.div>
                 <div className="buttons">
                     <button onClick={handle_get_started} >Get Started</button>
                     <button className="login_btn" onClick={handle_get_started} >Login</button>

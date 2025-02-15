@@ -2,12 +2,6 @@ import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
 
-    const navigate = useNavigate()
-
-    const handleHome = () => {
-        navigate('/')
-    }
-
 
 
     return ( 

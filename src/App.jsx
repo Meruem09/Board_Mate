@@ -21,7 +21,6 @@ function App() {
           <Route path='/header2' element={<Header2/>}></Route>
           <Route path='/main' element={<Main/>}></Route>
           <Route path='/sidebar' element={<Sidebar/>}></Route>
-          
         </Routes>
       </Router>
     </>

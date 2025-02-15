@@ -12,6 +12,10 @@ const Header2 = () => {
         navigate_to('/login')
     }
 
+    const handle_home = () => {
+        navigate_to('/')
+    }
+
     return ( 
         <div className="header2">
 
@@ -24,7 +28,7 @@ const Header2 = () => {
             </div>
 
             <div className="links">
-                <a className="home" to='#'>Home</a>
+                <a className="home" onClick={handle_home}>Home</a>
                 <a className="create_btn" >Create</a>
             </div>
             
